@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import dashboardImage from "@assets/generated_images/Property_management_dashboard_mockup_5cf8f468.png";
+import dashboardImage from "@assets/image_1761465989806.png";
 
 export function HeroSection() {
   return (
