@@ -3,6 +3,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
+  const handleStartTrial = () => {
+    const pricingSection = document.querySelector("#pricing");
+    if (pricingSection) {
+      const offsetTop = pricingSection.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
+  const handleScheduleDemo = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      const offsetTop = contactSection.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
@@ -43,7 +59,8 @@ export function CTASection() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="bg-white text-gradient-from font-medium hover:bg-white/90 shadow-xl px-8 h-12 gap-2"
+                  onClick={handleStartTrial}
+                  className="bg-white text-gradient-from font-medium hover:bg-white/90 hover:scale-[1.02] shadow-xl px-8 h-12 gap-2 transition-all duration-300"
                   data-testid="button-start-trial-cta"
                 >
                   Start Free Trial
@@ -52,7 +69,8 @@ export function CTASection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 h-12"
+                  onClick={handleScheduleDemo}
+                  className="border-white/30 text-white hover:bg-white/10 hover:scale-[1.02] backdrop-blur-sm px-8 h-12 transition-all duration-300"
                   data-testid="button-schedule-demo"
                 >
                   Schedule a Demo

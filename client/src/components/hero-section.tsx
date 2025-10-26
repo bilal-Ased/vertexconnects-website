@@ -4,6 +4,22 @@ import { motion } from "framer-motion";
 import dashboardImage from "@assets/image_1761465989806.png";
 
 export function HeroSection() {
+  const handleStartTrial = () => {
+    const pricingSection = document.querySelector("#pricing");
+    if (pricingSection) {
+      const offsetTop = pricingSection.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
+  const handleWatchDemo = () => {
+    const featuresSection = document.querySelector("#features");
+    if (featuresSection) {
+      const offsetTop = featuresSection.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
       {/* Background Gradient */}
@@ -51,7 +67,8 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-gradient-from via-gradient-via to-gradient-to text-white font-medium shadow-lg hover:shadow-xl transition-shadow text-base px-8 h-12"
+                onClick={handleStartTrial}
+                className="bg-gradient-to-r from-gradient-from via-gradient-via to-gradient-to text-white font-medium shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-base px-8 h-12"
                 data-testid="button-start-trial-hero"
               >
                 Start Free Trial
@@ -59,7 +76,8 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-medium text-base px-8 h-12 gap-2"
+                onClick={handleWatchDemo}
+                className="font-medium text-base px-8 h-12 gap-2 hover:bg-accent hover:scale-[1.02] transition-all duration-300"
                 data-testid="button-watch-demo"
               >
                 <Play className="w-4 h-4" />

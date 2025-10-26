@@ -71,12 +71,12 @@ export function TestimonialsSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card
-                  className="p-8 h-full hover-elevate active-elevate-2 transition-all duration-300 bg-card/50 backdrop-blur-sm overflow-visible"
+                  className="p-8 h-full hover-elevate active-elevate-2 transition-all duration-300 bg-card/50 backdrop-blur-sm overflow-visible group hover:shadow-lg hover:-translate-y-1"
                   data-testid={`card-testimonial-${index}`}
                 >
                   {/* Quote Icon */}
                   <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gradient-from/10 to-gradient-via/10">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gradient-from/10 to-gradient-via/10 group-hover:scale-110 transition-transform duration-300">
                       <Quote className="w-6 h-6 text-gradient-from" />
                     </div>
                   </div>

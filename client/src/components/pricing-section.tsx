@@ -10,6 +10,14 @@ export function PricingSection() {
     queryKey: ["/api/pricing"],
   });
 
+  const handlePlanClick = (planId: string) => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      const offsetTop = contactSection.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="pricing" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,10 +69,10 @@ export function PricingSection() {
                 className={plan.highlighted ? "md:-mt-4" : ""}
               >
                 <Card
-                  className={`relative p-8 h-full flex flex-col transition-all duration-300 overflow-visible ${
+                  className={`relative p-8 h-full flex flex-col transition-all duration-300 overflow-visible group hover:-translate-y-1 ${
                     plan.highlighted
                       ? "bg-gradient-to-br from-gradient-from/5 via-gradient-via/5 to-gradient-to/5 border-gradient-from/30 shadow-xl hover:shadow-2xl"
-                      : "bg-card/50 backdrop-blur-sm hover-elevate active-elevate-2"
+                      : "bg-card/50 backdrop-blur-sm hover-elevate active-elevate-2 hover:shadow-lg"
                   }`}
                   data-testid={`card-pricing-${plan.id}`}
                 >
@@ -132,7 +140,8 @@ export function PricingSection() {
                   {/* CTA Button */}
                   <Button
                     size="lg"
-                    className={`w-full ${
+                    onClick={() => handlePlanClick(plan.id)}
+                    className={`w-full transition-all duration-300 hover:scale-[1.02] ${
                       plan.highlighted
                         ? "bg-gradient-to-r from-gradient-from via-gradient-via to-gradient-to text-white shadow-lg hover:shadow-xl"
                         : ""

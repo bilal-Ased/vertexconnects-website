@@ -67,12 +67,12 @@ export function FeaturesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card
-                className="relative p-8 h-full hover-elevate active-elevate-2 transition-all duration-300 bg-card/50 backdrop-blur-sm border-card-border overflow-visible"
+                className="relative p-8 h-full hover-elevate active-elevate-2 transition-all duration-300 bg-card/50 backdrop-blur-sm border-card-border overflow-visible group hover:shadow-lg hover:-translate-y-1"
                 data-testid={`card-feature-${index}`}
               >
                 {/* Icon */}
                 <div
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} mb-6 shadow-lg`}
+                  className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
                 >
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
