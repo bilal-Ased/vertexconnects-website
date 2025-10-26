@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-export function CTASection() {
+interface CTASectionProps {
+  onStartTrial: () => void;
+}
+
+export function CTASection({ onStartTrial }: CTASectionProps) {
   const handleStartTrial = () => {
-    const pricingSection = document.querySelector("#pricing");
-    if (pricingSection) {
-      const offsetTop = pricingSection.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: offsetTop, behavior: "smooth" });
-    }
+    onStartTrial();
   };
 
   const handleScheduleDemo = () => {

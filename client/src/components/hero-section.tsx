@@ -3,13 +3,13 @@ import { Play, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import dashboardImage from "@assets/image_1761465989806.png";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onStartTrial: () => void;
+}
+
+export function HeroSection({ onStartTrial }: HeroSectionProps) {
   const handleStartTrial = () => {
-    const pricingSection = document.querySelector("#pricing");
-    if (pricingSection) {
-      const offsetTop = pricingSection.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: offsetTop, behavior: "smooth" });
-    }
+    onStartTrial();
   };
 
   const handleWatchDemo = () => {

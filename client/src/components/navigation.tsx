@@ -4,7 +4,11 @@ import { ThemeToggle } from "./theme-toggle";
 import { Building2, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function Navigation() {
+interface NavigationProps {
+  onStartTrial: () => void;
+}
+
+export function Navigation({ onStartTrial }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -48,12 +52,8 @@ export function Navigation() {
   };
 
   const handleStartTrial = () => {
-    const pricingSection = document.querySelector("#pricing");
-    if (pricingSection) {
-      const offsetTop = pricingSection.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: offsetTop, behavior: "smooth" });
-      setMobileMenuOpen(false);
-    }
+    setMobileMenuOpen(false);
+    onStartTrial();
   };
 
   return (
