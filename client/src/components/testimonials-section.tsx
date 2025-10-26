@@ -71,7 +71,7 @@ export function TestimonialsSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card
-                  className="p-8 h-full hover-elevate active-elevate-2 transition-all duration-300 bg-card/50 backdrop-blur-sm overflow-visible group hover:shadow-lg hover:-translate-y-1"
+                  className="p-8 h-full hover-elevate active-elevate-2 transition-all duration-300 bg-card/30 backdrop-blur-xl border-border/50 overflow-visible group hover:shadow-xl hover:-translate-y-1"
                   data-testid={`card-testimonial-${index}`}
                 >
                   {/* Quote Icon */}

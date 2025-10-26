@@ -97,7 +97,7 @@ export function AnalyticsSection() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="p-4 bg-card/50 backdrop-blur-sm" data-testid={`card-metric-${index}`}>
+                  <Card className="p-4 bg-card/30 backdrop-blur-xl border-border/50" data-testid={`card-metric-${index}`}>
                     <div className="flex items-start justify-between mb-2">
                       <div className="p-2 rounded-lg bg-gradient-to-br from-gradient-from/10 to-gradient-via/10">
                         <metric.icon className="w-4 h-4 text-gradient-from" />
@@ -135,7 +135,7 @@ export function AnalyticsSection() {
             className="space-y-6"
           >
             {/* Revenue Chart */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm" data-testid="card-revenue-chart">
+            <Card className="p-6 bg-card/30 backdrop-blur-xl border-border/50" data-testid="card-revenue-chart">
               <h3 className="text-sm font-semibold text-foreground mb-4">
                 Monthly Revenue
               </h3>
@@ -182,7 +182,7 @@ export function AnalyticsSection() {
             </Card>
 
             {/* Occupancy Chart */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm" data-testid="card-occupancy-chart">
+            <Card className="p-6 bg-card/30 backdrop-blur-xl border-border/50" data-testid="card-occupancy-chart">
               <h3 className="text-sm font-semibold text-foreground mb-4">
                 Occupancy Trend
               </h3>

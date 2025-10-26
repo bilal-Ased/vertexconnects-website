@@ -71,8 +71,8 @@ export function PricingSection() {
                 <Card
                   className={`relative p-8 h-full flex flex-col transition-all duration-300 overflow-visible group hover:-translate-y-1 ${
                     plan.highlighted
-                      ? "bg-gradient-to-br from-gradient-from/5 via-gradient-via/5 to-gradient-to/5 border-gradient-from/30 shadow-xl hover:shadow-2xl"
-                      : "bg-card/50 backdrop-blur-sm hover-elevate active-elevate-2 hover:shadow-lg"
+                      ? "bg-gradient-to-br from-gradient-from/5 via-gradient-via/5 to-gradient-to/5 backdrop-blur-xl border-gradient-from/30 shadow-xl hover:shadow-2xl"
+                      : "bg-card/30 backdrop-blur-xl border-border/50 hover-elevate active-elevate-2 hover:shadow-xl"
                   }`}
                   data-testid={`card-pricing-${plan.id}`}
                 >

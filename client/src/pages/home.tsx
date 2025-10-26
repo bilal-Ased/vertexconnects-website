@@ -8,6 +8,7 @@ import { CTASection } from "@/components/cta-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import { TrialSignupModal } from "@/components/trial-signup-modal";
+import { Toaster } from "@/components/ui/toaster";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
       </main>
       <Footer />
       <TrialSignupModal open={trialModalOpen} onOpenChange={setTrialModalOpen} />
+      <Toaster />
     </div>
   );
 }

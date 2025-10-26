@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 
 export function ContactSection() {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,6 +20,12 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    toast({
+      title: "Message Sent Successfully!",
+      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+      duration: 5000,
+    });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const contactInfo = [
@@ -71,7 +79,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 bg-card/50 backdrop-blur-sm">
+            <Card className="p-8 bg-card/30 backdrop-blur-xl border-border/50">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
@@ -167,7 +175,7 @@ export function ContactSection() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="block"
                 >
-                  <Card className="p-6 bg-card/50 backdrop-blur-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                  <Card className="p-6 bg-card/30 backdrop-blur-xl border-border/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-gradient-from to-gradient-via group-hover:scale-110 transition-transform duration-300">
                         <info.icon className="w-6 h-6 text-white" />
@@ -187,7 +195,7 @@ export function ContactSection() {
             </div>
 
             {/* Additional Info */}
-            <Card className="p-8 bg-gradient-to-br from-gradient-from/5 via-gradient-via/5 to-gradient-to/5 border-gradient-from/30">
+            <Card className="p-8 bg-gradient-to-br from-gradient-from/5 via-gradient-via/5 to-gradient-to/5 backdrop-blur-xl border-gradient-from/30">
               <h4 className="text-xl font-bold text-foreground mb-4">
                 Business Hours
               </h4>

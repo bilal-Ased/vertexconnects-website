@@ -63,7 +63,7 @@ export function Navigation({ onStartTrial }: NavigationProps) {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-lg"
+          ? "bg-background/80 backdrop-blur-2xl border-b border-border/50 shadow-xl"
           : "bg-transparent"
       }`}
     >
@@ -140,7 +140,7 @@ export function Navigation({ onStartTrial }: NavigationProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            className="md:hidden bg-background/90 backdrop-blur-2xl border-b border-border/50"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (

@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 import { Sparkles } from "lucide-react";
 
 interface TrialSignupModalProps {
@@ -17,6 +18,7 @@ interface TrialSignupModalProps {
 }
 
 export function TrialSignupModal({ open, onOpenChange }: TrialSignupModalProps) {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -28,14 +30,18 @@ export function TrialSignupModal({ open, onOpenChange }: TrialSignupModalProps) 
     e.preventDefault();
     console.log("Trial signup:", formData);
     // Here you would typically send the data to your backend
-    alert("Thank you for signing up! We'll be in touch shortly.");
+    toast({
+      title: "Welcome to Vertex Property Cloud!",
+      description: "Your 14-day free trial has started. Check your email for next steps.",
+      duration: 5000,
+    });
     onOpenChange(false);
     setFormData({ fullName: "", email: "", company: "", properties: "" });
   };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px] bg-background/95 backdrop-blur-xl border-border/50">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
             <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-gradient-from via-gradient-via to-gradient-to">
