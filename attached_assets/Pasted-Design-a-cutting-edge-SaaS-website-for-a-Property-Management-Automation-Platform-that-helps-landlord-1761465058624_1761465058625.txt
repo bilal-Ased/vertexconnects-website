@@ -1,0 +1,116 @@
+Design a cutting-edge SaaS website for a Property Management Automation Platform that helps landlords and real estate managers streamline operations, automate payments, and visualize data — all from a single dashboard.
+
+🎯 Core Message:
+Streamline property management, automate WhatsApp rent reminders, send invoices instantly, and gain actionable insights—all in one intelligent platform.
+
+🎨 Design Direction (UI/UX):
+
+Ultra-modern SaaS style inspired by Linear, Framer, and Stripe
+
+Color Palette: Cool gradient tones (light blue, slate, off-white, and subtle purple/teal accents)
+
+Typography: Inter or Manrope (bold headlines, clean body text)
+
+Layout: Full-width responsive design with generous white space
+
+UI Elements: Rounded corners, glassmorphism cards, minimalist icons, subtle shadows, soft gradients
+
+Animations: Smooth fade-ins and micro-interactions for CTAs and section transitions
+
+Tone: Trustworthy, tech-savvy, and premium
+
+🏠 Hero Section:
+
+Large, clean hero area with two-column layout.
+
+Left:
+
+Headline: “Modern Property Management, Simplified.”
+
+Subtext: “Automate rent reminders via WhatsApp, send invoices instantly, and manage everything from one powerful dashboard.”
+
+CTA Buttons:
+
+Primary: “Start Free Trial” (gradient button, glowing hover)
+
+Secondary: “Watch Demo” (outlined button with icon)
+
+Right:
+
+Prominent area for your app screenshot displayed in a sleek laptop or phone mockup.
+
+Add subtle motion effects (floating mockup, or device slide-in animation).
+
+Label placeholder: “App Screenshot or Dashboard Preview Here”
+
+Background: Gradient with abstract geometric or soft wave shapes for depth.
+
+⚙️ Feature Highlights (4 Cards with Icons):
+
+Property & Tenant Management: All property and tenant data in one intuitive dashboard. Track leases, maintenance, and documents with ease.
+
+WhatsApp Payment Reminders: Automated, branded payment messages directly on WhatsApp.
+
+Automated Invoice Delivery: Generate and send invoices instantly once payments are confirmed—via email or WhatsApp.
+
+Insightful Analytics: Real-time dashboards with metrics like revenue, occupancy, and payment trends.
+
+Use minimal icons, clean grid layout, hover effects, and light background contrast.
+
+📊 Analytics Section:
+
+Split layout: Left text + right dashboard preview (with charts, revenue graphs, occupancy trends).
+
+Headline: “Smarter Decisions Through Data.”
+
+Add animated bar and line charts for visual impact.
+
+💬 Testimonials Section:
+
+Clean slider layout with profile avatars.
+
+“Since using this platform, rent collection is smoother and communication is effortless.”
+
+— Property Manager, Silver Fox Estates
+
+💸 Pricing Section:
+
+Three-tier pricing cards: Starter, Pro, Enterprise
+
+Highlight the middle plan (Pro) with a gradient background.
+
+Each card includes features, price, and “Get Started” button.
+
+Smooth hover animation (slight lift + glow).
+
+📩 CTA Section (Before Footer):
+
+Simple banner: “Ready to simplify property management?”
+
+Button: “Start Free Trial”
+
+Subtle gradient background and rounded edges.
+
+🔗 Footer:
+
+Minimal dark background with light text
+
+Links: About • Contact • Privacy Policy • Terms
+
+Social icons (LinkedIn, X, Facebook)
+
+“© 2025 Vertex Property Cloud. All rights reserved.”
+
+💡 Additional Touches:
+
+Sticky top navigation with light transparency
+
+Smooth scroll and section reveal animations
+
+Option for dark/light mode toggle
+
+Responsive for desktop, tablet, and mobile
+
+🧠 Design Mood:
+Clean. Fast. Professional. Automated.
+Inspired by: Linear, Notion, Monday.com, Stripe Dashboard UI.
