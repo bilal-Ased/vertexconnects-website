@@ -5,6 +5,7 @@ import { AnalyticsSection } from "@/components/analytics-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { PricingSection } from "@/components/pricing-section";
 import { CTASection } from "@/components/cta-section";
+import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import { useEffect } from "react";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <TestimonialsSection />
         <PricingSection />
         <CTASection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
